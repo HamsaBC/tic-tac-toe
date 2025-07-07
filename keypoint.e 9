@@ -1,0 +1,6 @@
+tic tac toe board should be design i.e 9x9 format
+now the input should be formatted in the alternative manner 
+the input should be given only the x and o values are allowed
+if the board is fulled then the winning should be decided
+In the winning is decided based on the board occupied
+after completion it should restart
