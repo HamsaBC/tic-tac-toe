@@ -72,6 +72,10 @@
   border: 2px solid #444;
 }
 
+.highlight {
+  background-color: #90ee90; /* light green */
+}
+
 /* Reset button */
 .button {
   padding: 10px 20px;
