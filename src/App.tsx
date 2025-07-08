@@ -18,7 +18,7 @@ function App() {
 
     const result = calculateWinner(newBoard); // winner calculation
     if (result) {
-      setWinner(result.winner);
+      setWinner(result.winner); // stores winner
       setWinCell(result.indices);
     }
   };
@@ -29,16 +29,26 @@ function App() {
     setWinner(null);
     setWinCell([]);
   };
+  function checkcell(cell) {
+  return cell ==null ;
+  }
 
   return (
     <>
       <h1>Tic Tac Toe</h1>
+      {board.every(cell => cell=== null) && (
+        <>
+        <button onClick={() => setXturn(true)}> Play as X</button>
+        <button onClick={() => setXturn(false)}> Play as O </button>
+        </>
+      )}
       <div className="board">
-        {board.map((cell, i) => (
+        {board.map((cell, i) => ( // maping through the cells and indexes
           <div
             key={i}
             className={`cell ${Array.isArray(winCell) && winCell.includes(i) ? 'highlight' : ''}`} //highlits the wiining indices
-            onClick={() => handleClick(i)}
+            onClick={() => handleClick(i)
+            }
           >
             {cell}
           </div>
